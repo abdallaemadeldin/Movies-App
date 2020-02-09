@@ -33,6 +33,7 @@ class Details extends Component {
                         iconStyle={headerBtnIcon}
                         style={headerBtn}
                         background={null}
+                        onPress={() => this.props.navigation.goBack()}
                     />
                 </View>
                 <Image source={{ uri: 'http://www.pngall.com/wp-content/uploads/2016/05/Spider-Man-PNG-Image.png' }} style={movieHeroImage} />
