@@ -12,6 +12,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Splash from 'screens/Splash';
 import Home from 'screens/Home';
+import Details from 'screens/Details';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,7 @@ class App extends React.Component {
         }}>
           <Stack.Screen name="Splash" component={Splash} />
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Details" component={Details} />
         </Stack.Navigator>
       </NavigationContainer>
     );
