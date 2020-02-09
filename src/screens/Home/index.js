@@ -34,27 +34,11 @@ class Home extends Component {
         }]
     }
 
-    componentDidMount() {
-        fetch("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup", {
-            method: "GET",
-            headers: {
-                "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-                "x-rapidapi-key": "ba3290a6abmsh76ec286d4644834p1e73edjsn26b244e9ceea"
-            }
-        }).then(res => {
-            return res.json();
-        }).then(res => {
-            console.log(res);
-        }).catch(e => {
-            console.log('err', e);
-        })
-    }
-
     renderItem(item) {
         return (
-            <View key={item.index} style={style.itemContainer}>
+            <TouchableOpacity key={item.index} style={style.itemContainer} onPress={() => this.props.navigation.navigate('Details')}>
                 <Image source={{ uri: item.item.url }} style={style.itemImage} />
-            </View>
+            </TouchableOpacity>
         );
     }
 
