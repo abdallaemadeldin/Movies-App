@@ -1,0 +1,10 @@
+{
+  "name": "MovieApp",
+  "displayName": "MovieApp",
+  "Colors": {
+    "red": "#D02849",
+    "dark": "#0D1224",
+    "mauve": "#4A1831",
+    "white": "#FFFFFF"
+  }
+}
