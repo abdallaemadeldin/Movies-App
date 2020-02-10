@@ -1,9 +1,12 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Image } from 'react-native';
 import { Colors } from './../../../app.json';
 
 const { width, height, fontScale } = Dimensions.get('screen');
 const regular = "MartelSans-Regular";
 const fontFamily = "MartelSans-SemiBold";
+Image.getSize('http://www.pngall.com/wp-content/uploads/2016/05/Spider-Man-PNG-Image.png', (w, h) => {
+    global.heroImgHeight = (h * ((width * 65) / 100)) / w;
+});
 
 export const style = StyleSheet.create({
     container: {
@@ -47,7 +50,7 @@ export const style = StyleSheet.create({
     },
     movieHeroImage: {
         width: width * 65 / 100,
-        height: 234,
+        height: global.heroImgHeight,
         zIndex: 10,
         alignSelf: 'center',
         transform: [{
