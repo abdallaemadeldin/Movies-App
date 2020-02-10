@@ -1,11 +1,9 @@
-import { StyleSheet, Dimensions, Image } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { Colors } from './../../../app.json';
 
 const { width, height, fontScale } = Dimensions.get('screen');
+const regular = "MartelSans-Regular";
 const fontFamily = "MartelSans-SemiBold";
-Image.getSize('http://www.pngall.com/wp-content/uploads/2016/05/Spider-Man-PNG-Image.png', (w, h) => {
-    // alert((h * width * 70 / 100) / w);
-})
 
 export const style = StyleSheet.create({
     container: {
@@ -16,13 +14,13 @@ export const style = StyleSheet.create({
     subContainer: {
         width: width,
         height: '70%',
-        justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
         bottom: 0,
         borderTopRightRadius: 25,
         borderTopLeftRadius: 25,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        paddingTop: '30%'
     },
     headerView: {
         width: width,
@@ -48,12 +46,82 @@ export const style = StyleSheet.create({
         fontSize: 20 * fontScale
     },
     movieHeroImage: {
-        width: width * 70 / 100,
-        height: 252,
+        width: width * 65 / 100,
+        height: 234,
         zIndex: 10,
         alignSelf: 'center',
         transform: [{
             rotateY: '180deg'
         }]
+    },
+    movieName: {
+        color: Colors.white,
+        fontFamily: regular,
+        fontSize: 15 * fontScale,
+        textAlign: 'center'
+    },
+    boldName: {
+        color: Colors.white,
+        fontFamily: fontFamily,
+        fontSize: 20 * fontScale
+    },
+    releaseDate: {
+        color: '#ccc',
+        fontSize: 10 * fontScale,
+        fontFamily: regular
+    },
+    rateView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        alignSelf: 'center',
+        justifyContent: 'center'
+    },
+    categoriesView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        alignSelf: 'center',
+        justifyContent: 'center',
+        marginTop: '2%'
+    },
+    rateIcons: {
+        fontSize: 18 * fontScale,
+        marginTop: '2%'
+    },
+    categoryName: {
+        fontFamily: regular,
+        fontSize: 14 * fontScale,
+        backgroundColor: '#581A35',
+        paddingHorizontal: '3%',
+        paddingVertical: '1%',
+        marginHorizontal: '2%',
+        borderRadius: 10,
+        overflow: 'hidden',
+        color: Colors.white
+    },
+    FooterTitle: {
+        alignSelf: 'flex-start',
+        marginVertical: '2%',
+        marginStart: '5%',
+        fontFamily: fontFamily,
+        fontSize: 18 * fontScale,
+        color: Colors.white
+    },
+    itemContainer: {
+        width: width * 20 / 100,
+        marginHorizontal: width * 2.5 / 100,
+        backgroundColor: 'transparent'
+    },
+    name: {
+        fontFamily: fontFamily,
+        fontSize: 10 * fontScale,
+        color: Colors.white,
+        textAlign: 'center',
+        lineHeight: 15,
+        marginTop: '8%'
+    },
+    castImg: {
+        width: '100%',
+        height: '70%',
+        borderRadius: 10
     }
 });
