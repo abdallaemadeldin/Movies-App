@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     
 env:
-  APP_CENTER_TOKEN: ${{ secrets.APP_CENTER_TOKEN_MYAPP_ANDROID_TEST  }}  
+  APP_CENTER_TOKEN: ${{ secrets.APP_CENTER_TOKEN_MYAPP_ANDROID  }}  
   APP_NAME: ${{ 'MyApp-Android/ENV_TEST'  }}  
   TESTING_GROUP: ${{  'ENV_TEST'  }} 
   UPLOAD_FILE: ${{ 'android/app/build/outputs/apk/app-release.apk'  }}  
